@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD Gratuites - Catalogue de bandes dessinées en PDF</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">
+        <img src="/img/logo.png" alt="Logo">
+      </a>
+      <nav class="nav-links">
+        <a href="/">Catalogue</a>
+        <a href="/admin/login.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <h1>📚 Bandes Dessinées 100% Gratuites</h1>
+      <p>Télécharge tes BD préférées en PDF, sans inscription, sans frais.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="ad-slot">Emplacement publicitaire</div>
+
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty-state" style="display:none;"><p>Aucune BD n'a encore été ajoutée.</p></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> BD Gratuites — Toutes les BD sont proposées gratuitement en PDF.</div>
+  </footer>
+
+  <script src="/js/catalogue.js"></script>
+</body>
+</html>

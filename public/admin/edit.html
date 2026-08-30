@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modifier une BD - Admin</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand"><img src="/img/logo.png" alt="Logo"></a>
+      <nav class="nav-links"><a href="/admin/dashboard.html">Tableau de bord</a></nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="admin-header">
+      <h1 id="page-heading">Modifier une BD</h1>
+      <a class="btn secondary" href="/admin/dashboard.html">← Retour</a>
+    </div>
+
+    <div id="message-box" style="margin-top:20px;"></div>
+
+    <form class="stack" style="margin-top:24px;" id="edit-form">
+      <div>
+        <label>Nom de la BD *</label>
+        <input type="text" name="title" required>
+      </div>
+
+      <div>
+        <label>Description</label>
+        <textarea name="description"></textarea>
+      </div>
+
+      <div>
+        <label>Remplacer l'affiche (optionnel)</label>
+        <label class="file-drop">
+          <input type="file" name="cover" accept="image/*">
+          <span id="cover-label">Cliquer pour choisir une nouvelle image</span>
+        </label>
+      </div>
+
+      <div>
+        <label>Remplacer le fichier PDF (optionnel)</label>
+        <label class="file-drop">
+          <input type="file" name="pdf" accept="application/pdf">
+          <span id="pdf-label">Cliquer pour choisir un nouveau PDF (max 200 Mo)</span>
+        </label>
+        <div class="hint" id="current-pdf-info"></div>
+      </div>
+
+      <div class="progress-bar" id="progress-bar"><div class="fill" id="progress-fill"></div></div>
+      <div class="progress-label" id="progress-label"></div>
+
+      <button class="btn" type="submit" id="submit-btn">Enregistrer les modifications</button>
+    </form>
+  </div>
+
+  <script src="/js/auth-check.js"></script>
+  <script src="/js/admin-edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord Admin - BD Gratuites</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand"><img src="/img/logo.png" alt="Logo"></a>
+      <nav class="nav-links">
+        <a href="/">Catalogue</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="admin-header">
+      <h1>Tableau de bord</h1>
+      <div style="display:flex; gap:10px;">
+        <a class="btn" href="/admin/add.html">+ Ajouter une BD</a>
+        <button class="btn secondary" id="logout-btn">Déconnexion</button>
+      </div>
+    </div>
+
+    <div id="table-wrap"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> BD Gratuites</div>
+  </footer>
+
+  <script src="/js/auth-check.js"></script>
+  <script src="/js/admin-dashboard.js"></script>
+</body>
+</html>
