@@ -10,6 +10,11 @@ function getClient() {
       accessKeyId: process.env.R2_ACCESS_KEY_ID,
       secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
     },
+    // Les versions recentes du SDK ajoutent par defaut une somme de controle (checksum)
+    // a la signature. Le navigateur ne l'envoie pas lors d'un simple PUT depuis un <input type=file>,
+    // ce qui fait echouer la signature (403) sur Cloudflare R2. On desactive ce comportement
+    // pour que les URLs pre-signees fonctionnent avec de simples requetes PUT depuis le navigateur.
+    requestChecksumCalculation: 'WHEN_REQUIRED',
   });
 }
 
